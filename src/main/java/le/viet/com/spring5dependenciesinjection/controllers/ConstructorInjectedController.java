@@ -6,19 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 /**
+ * * This demo dependency injection through constructor
  * Created by associate on 3/6/18.
  */
 @Controller
 public class ConstructorInjectedController {
 
-    private SpanishGreeting spanishGreeting;
+    private GreetingService greetingService;
 
     @Autowired
     public ConstructorInjectedController(SpanishGreeting spanishGreeting) {
-        this.spanishGreeting = spanishGreeting;
+        this.greetingService = spanishGreeting;
     }
 
     public String sayHello() {
-        return this.spanishGreeting.sayHello();
+        return this.greetingService.sayHello();
     }
 }

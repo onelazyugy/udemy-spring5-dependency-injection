@@ -1,5 +1,6 @@
 package le.viet.com.spring5dependenciesinjection.controllers;
 
+import le.viet.com.spring5dependenciesinjection.services.SpanishGreeting;
 import le.viet.com.spring5dependenciesinjection.services.VNGreeting;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,12 +15,12 @@ public class ConstructorInjectedControllerTest {
 
     @Before
     public void setUp() throws Exception {
-        this.constructorInjectedController = new ConstructorInjectedController(new VNGreeting());
+        this.constructorInjectedController = new ConstructorInjectedController(new SpanishGreeting());
     }
 
     @Test
     public void sayHello() throws Exception {
-        assertEquals("xin chao!", this.constructorInjectedController.sayHello());
+        assertEquals("Hola!", this.constructorInjectedController.sayHello());
     }
 
 }

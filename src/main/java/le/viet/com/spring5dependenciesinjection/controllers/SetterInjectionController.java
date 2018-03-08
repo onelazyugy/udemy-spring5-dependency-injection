@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
+ * This demo dependency injection through setter
  * Created by associate on 3/6/18.
  */
 @Controller

@@ -15,6 +15,7 @@ public class Spring5DependenciesInjectionApplication {
 		//ctx hold all spring bean
 		ApplicationContext ctx =  SpringApplication.run(Spring5DependenciesInjectionApplication.class, args);
 		DemoController demoController = (DemoController) ctx.getBean("demoController");
+
 		demoController.hello();
 
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
