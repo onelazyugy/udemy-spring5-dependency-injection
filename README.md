@@ -8,3 +8,8 @@
 - Use DI with interface not classes
 - Inversion of control (IoC) = technique to allow dependencies to be injected at runtime
     - ex: spring's container (it is how spring wire up all of the bean)
+- Annotations
+    - @Autowired - tell spring to inject this bean 
+    - @Qualifier - tell spring which bean to inject if we have multiple beans of same type
+    - @Primary - tell spring to inject the default bean if we have multiple beans of same type
+    - @Profile - tell spring to use the profile that is currently active

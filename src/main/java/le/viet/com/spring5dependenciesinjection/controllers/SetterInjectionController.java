@@ -15,7 +15,7 @@ public class SetterInjectionController {
     private GreetingService greetingService;
 
     @Autowired
-    @Qualifier("spanishGreeting")
+    @Qualifier("vnGreeting") //can be here or inside method parameter similar to constructor injection
     public void setGreetingService(GreetingService greetingService) {
         this.greetingService = greetingService;
     }

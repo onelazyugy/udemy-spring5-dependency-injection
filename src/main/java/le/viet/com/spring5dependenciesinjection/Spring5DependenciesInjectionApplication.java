@@ -7,6 +7,8 @@ import le.viet.com.spring5dependenciesinjection.controllers.SetterInjectionContr
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 
 @SpringBootApplication
 public class Spring5DependenciesInjectionApplication {
@@ -16,10 +18,25 @@ public class Spring5DependenciesInjectionApplication {
 		ApplicationContext ctx =  SpringApplication.run(Spring5DependenciesInjectionApplication.class, args);
 		DemoController demoController = (DemoController) ctx.getBean("demoController");
 
-		demoController.hello();
+		System.out.println(demoController.hello());
 
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(SetterInjectionController.class).sayHello());
 		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+
+
+
 	}
+
+	@Bean(name = "sayBye")
+    @Profile("vn")
+    public String sayByeInVn() {
+        return "tam biet!";
+    }
+
+    @Bean(name = "sayBye")
+    @Profile("es")
+    public String sayByeInSpanish() {
+        return "adiós!";
+    }
 }
