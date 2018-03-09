@@ -6,7 +6,7 @@
         - setter (not most preferred)
         - constructor (most preferred)
 - Use DI with interface not classes
-- Inversion of control (IoC) = technique to allow dependencies to be injected at runtime
+- Inversion of control (IoC) = run time environment which injects dependencies
     - ex: spring's container (it is how spring wire up all of the bean)
 - Annotations
     - @Autowired - tell spring to inject this bean 
