@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
  * Created by associate on 3/8/18.
  */
 @Service
-@Profile("bike")
+@Profile({"bike", "default"})
 public class Bike implements Vehicle {
     @Override
     public String retrieveVehicleProfile() {
